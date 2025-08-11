@@ -1,0 +1,96 @@
+/* === Card Container === */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Image, Title, Button */
+  gap: 0.75rem;
+  background-color: #fff;
+  min-height: 320px;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0px 13px 20px 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* === Image Container === */
+.image-container {
+  /* position: relative; */
+  width: 100%;
+  height: 200px;
+}
+
+/* === Product Image === */
+.image {
+  width: 100%;
+  min-height: 200px;
+  max-height: 201px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* === Badge === */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.badge.new {
+  background-color: #4caf50; /* Green */
+}
+
+.badge.bestseller {
+  background-color: #ff5722; /* Deep Orange */
+}
+
+.badge.limited {
+  background-color: #9c27b0; /* Purple */
+}
+
+/* === Product Title === */
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* === Button Wrapper === */
+.button {
+  align-self: end;
+}
+
+/* === Responsive Fixes === */
+@media (max-width: 768px) {
+  .card {
+    min-height: 280px;
+    padding: 0.75rem;
+  }
+
+  .image {
+    max-height: 160px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+}
