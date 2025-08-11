@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { data } from '../Data/ProductData';
-import ProductCard from '../components/ProductCard';
+import ProductCard from './../components/ProductCard';
 import { useParams } from 'react-router-dom'; // 👈 import this
 import './Shop.css';
 import ContactCard from '../Components/ContactCard';
